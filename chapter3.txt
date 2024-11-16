@@ -1,1 +1,179 @@
 We were in Robotics and Automation lab...
+
+
+SANJAI@SANJAI MINGW64 /e/Learn/HTML/course/BACKEND/Story
+$ code -r chapter1.txt // to open in vs code
+
+SANJAI@SANJAI MINGW64 /e/Learn/HTML/course/BACKEND/Story
+$ git init // to initialize git in current working directory
+Initialized empty Git repository in E:/Learn/HTML/course/BACKEND/Story/.git/
+
+SANJAI@SANJAI MINGW64 /e/Learn/HTML/course/BACKEND/Story (master)
+$ ls -a  // to view hidden files
+./  ../  .git/  chapter1.txt 
+
+SANJAI@SANJAI MINGW64 /e/Learn/HTML/course/BACKEND/Story (master)
+$ git status // to check which is not entered into stagging area
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        chapter1.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+SANJAI@SANJAI MINGW64 /e/Learn/HTML/course/BACKEND/Story (master)
+$ git add chapter1.txt // added to stagging area
+
+SANJAI@SANJAI MINGW64 /e/Learn/HTML/course/BACKEND/Story (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   chapter1.txt
+
+
+SANJAI@SANJAI MINGW64 /e/Learn/HTML/course/BACKEND/Story (master)
+$ git commit -m "Completed Chapter 1" //commiting the changes with a message
+Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'SANJAI@SANJAI.(none)')
+
+
+
+
+SANJAI@SANJAI MINGW64 /e/Learn/HTML/course/BACKEND/Story (master)
+$ git config --global user.email "sanjai.cs21@bitsathy.ac.in" // to add mail
+
+SANJAI@SANJAI MINGW64 /e/Learn/HTML/course/BACKEND/Story (master)
+$ git config --global user.name "SANJAI" // to add name
+
+SANJAI@SANJAI MINGW64 /e/Learn/HTML/course/BACKEND/Story (master)
+$ git commit -m "Completed Chapter 1"
+[master (root-commit) cf4b271] Completed Chapter 1
+ 1 file changed, 1 insertion(+)
+ create mode 100644 chapter1.txt
+
+SANJAI@SANJAI MINGW64 /e/Learn/HTML/course/BACKEND/Story (master)
+$ git log // to see all the comitted files
+commit cf4b2715b50a154100ee3362b2b7dcc1b0087586 (HEAD -> master)
+Author: SANJAI <sanjai.cs21@bitsathy.ac.in>
+Date:   Thu Nov 7 10:03:34 2024 +0530
+
+    Completed Chapter 1
+
+SANJAI@SANJAI MINGW64 /e/Learn/HTML/course/BACKEND/Story (master)
+$ touch chapter2.txt
+
+SANJAI@SANJAI MINGW64 /e/Learn/HTML/course/BACKEND/Story (master)
+$ touch chapter3.txt
+
+SANJAI@SANJAI MINGW64 /e/Learn/HTML/course/BACKEND/Story (master)
+$ code -r chapter2.txt
+
+SANJAI@SANJAI MINGW64 /e/Learn/HTML/course/BACKEND/Story (master)
+$ code -r chapter3.txt
+
+SANJAI@SANJAI MINGW64 /e/Learn/HTML/course/BACKEND/Story (master)
+$ git status
+On branch master
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        chapter2.txt
+        chapter3.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+SANJAI@SANJAI MINGW64 /e/Learn/HTML/course/BACKEND/Story (master)
+$ git add chapter2.txt
+
+SANJAI@SANJAI MINGW64 /e/Learn/HTML/course/BACKEND/Story (master)
+$ git add chapter3.txt 
+
+SANJAI@SANJAI MINGW64 /e/Learn/HTML/course/BACKEND/Story (master)
+$ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   chapter2.txt
+        new file:   chapter3.txt
+
+
+SANJAI@SANJAI MINGW64 /e/Learn/HTML/course/BACKEND/Story (master)
+$ git commit -m "Completed chapter 2"
+[master 3a7a011] Completed chapter 2
+ 2 files changed, 2 insertions(+)
+ create mode 100644 chapter2.txt
+ create mode 100644 chapter3.txt
+
+
+
+SANJAI@SANJAI MINGW64 /e/Learn/HTML/course/BACKEND/Story (master)
+$ git log
+commit 3a7a01199c7b01ceefa8f7e599e80cf0b907e742 (HEAD -> master)
+Author: SANJAI <sanjai.cs21@bitsathy.ac.in>
+Date:   Thu Nov 7 10:13:22 2024 +0530
+
+    Completed chapter 2
+
+commit cf4b2715b50a154100ee3362b2b7dcc1b0087586
+Author: SANJAI <sanjai.cs21@bitsathy.ac.in>
+Date:   Thu Nov 7 10:03:34 2024 +0530
+
+    Completed Chapter 1
+
+SANJAI@SANJAI MINGW64 /e/Learn/HTML/course/BACKEND/Story (master)
+$ git add . // to add every file to stagging area
+
+
+SANJAI@SANJAI MINGW64 /e/Learn/HTML/course/BACKEND/Story (master)
+$ git diff chapter3.txt // to see which datas has been changed
+diff --git a/chapter3.txt b/chapter3.txt
+index fa11c4e..8502b1d 100644
+--- a/chapter3.txt
++++ b/chapter3.txt
+@@ -1 +1 @@
+-We were in Robotics and Automation lab... //it is red color so this is the old data
+\ No newline at end of file
++gfhhjklfld // new data in green color
+\ No newline at end of file
+
+SANJAI@SANJAI MINGW64 /e/Learn/HTML/course/BACKEND/Story (master)
+$ git checkout chapter3.txt // to move back to the previous commit code
+Updated 1 path from the index
+
+SANJAI@SANJAI MINGW64 /e/Learn/HTML/course/BACKEND/Story/.git (master)
+$ git remote add origin https://github.com/Sanjai2004/Story.git // to store in git
+error: remote origin already exists.
+
+SANJAI@SANJAI MINGW64 /e/Learn/HTML/course/BACKEND/Story/.git (master)
+$ git branch -M main // to store in main 
+
+SANJAI@SANJAI MINGW64 /e/Learn/HTML/course/BACKEND/Story/.git (main)
+$ git push -u origin main // push all data to git
+info: please complete authentication in your browser...
+Enumerating objects: 53, done.
+Counting objects: 100% (53/53), done.
+Delta compression using up to 12 threads
+Compressing objects: 100% (45/45), done.
+Writing objects: 100% (53/53), 16.80 KiB | 782.00 KiB/s, done.
+Total 53 (delta 5), reused 0 (delta 0), pack-reused 0 (from 0)
+remote: Resolving deltas: 100% (5/5), done.
+To https://github.com/Sanjai2004/Story.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
